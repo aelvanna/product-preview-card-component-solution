@@ -16,6 +16,9 @@ $grey: hsl(228, 12%, 48%);
 $cream: hsl(30, 38%, 92%);
 $white: hsl(0, 0%, 100%);
 
+/* Breakpoints */
+$breakpoint-laptop: 1440px;
+
 h1 {
   font: 100% $Montserrat;
   color: $grey;
@@ -81,8 +84,14 @@ html {
   margin: 1.5rem 1rem;
 }
 
-img {
-  width: 100%;
+figure {
+  img {
+    width: 100%;
+
+    &.desktop-img {
+      display: none;
+    }
+  }
 }
 
 .product-text {
@@ -92,10 +101,9 @@ img {
 .product-price {
   display: flex;
   flex-direction: row;
-  width: 65%;
-  justify-content: space-between;
   align-items: center;
   padding-bottom: 1rem;
+  padding-right: 1rem;
 }
 
 button {
@@ -127,4 +135,44 @@ button {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: $breakpoint-laptop) {
+  .card {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    margin: 0 auto;
+    width: 40%;
+    height: 46%;
+  }
+
+  .product-text {
+    margin: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .product-price {
+    padding-bottom: 1.5rem;
+  }
+
+  h1,
+  h2 {
+    padding-bottom: 1.5rem;
+  }
+
+  .discounted-price {
+    padding-right: 1rem;
+  }
+
+  figure {
+    img {
+      &.mobile-img {
+        display: none;
+      }
+
+      &.desktop-img {
+        display: block;
+      }
+    }
+  }
 }
