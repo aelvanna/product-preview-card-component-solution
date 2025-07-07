@@ -58,13 +58,14 @@ html {
 
 .container {
   height: 100vh;
+  place-content: center;
 }
 
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 0.7rem;
   overflow: hidden;
-  height: 100vh;
+  height: fit-content;
   margin: 1.5rem 1rem;
 }
 
