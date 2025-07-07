@@ -87,6 +87,7 @@ img {
 }
 
 button {
+  display: flex;
   background-color: hsl(158, 36%, 37%);
   width: 100%;
   font-family: "Montserrat", sans-serif;
@@ -96,6 +97,10 @@ button {
   border-radius: 10px;
   padding: 0.875rem;
   border: none;
+  justify-content: center;
+}
+button .icon {
+  padding-right: 0.75rem;
 }
 
 .attribution {
