@@ -114,6 +114,11 @@ button {
   .icon {
     padding-right: 0.75rem;
   }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $green-700;
+  }
 }
 
 .attribution {

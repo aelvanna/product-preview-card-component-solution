@@ -102,6 +102,10 @@ button {
 button .icon {
   padding-right: 0.75rem;
 }
+button:hover {
+  cursor: pointer;
+  background-color: hsl(158, 42%, 18%);
+}
 
 .attribution {
   font-size: 11px;
