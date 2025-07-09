@@ -89,6 +89,10 @@ figure img.desktop-img {
   padding-right: 1rem;
 }
 
+.discounted-price {
+  padding-right: 1rem;
+}
+
 button {
   display: flex;
   background-color: hsl(158, 36%, 37%);
@@ -111,7 +115,7 @@ button:hover {
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 0.688rem;
   text-align: center;
 }
 
@@ -124,8 +128,8 @@ button:hover {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
     margin: 0 auto;
-    width: 40%;
-    height: 46%;
+    width: 36rem;
+    height: 27rem;
   }
   .product-text {
     margin: 1.75rem;
@@ -137,9 +141,6 @@ button:hover {
   h1,
   h2 {
     padding-bottom: 1.5rem;
-  }
-  .discounted-price {
-    padding-right: 1rem;
   }
   figure img.mobile-img {
     display: none;
