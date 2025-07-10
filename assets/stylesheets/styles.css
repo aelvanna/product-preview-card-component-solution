@@ -2,11 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 /* Variables */
-/* Fonts */
 /* Colour Palette*/
 /* Breakpoints */
 h1 {
-  font: 100% "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: hsl(228, 12%, 48%);
   text-transform: uppercase;
   font-size: 0.75rem;
@@ -16,7 +15,7 @@ h1 {
 }
 
 h2 {
-  font: 100% "Fraunces", sans-serif;
+  font-family: "Fraunces", sans-serif;
   color: hsl(212, 21%, 14%);
   font-size: 2rem;
   font-weight: 700;
@@ -24,23 +23,8 @@ h2 {
   padding-bottom: 1rem;
 }
 
-h3 {
-  font: 100% "Fraunces", sans-serif;
-  color: hsl(158, 36%, 37%);
-  font-weight: 700;
-  font-size: 2rem;
-}
-
-h4 {
-  font: 100% "Montserrat", sans-serif;
-  color: hsl(228, 12%, 48%);
-  text-decoration: line-through;
-  font-size: 0.75rem;
-  font-weight: 500;
-}
-
 p {
-  font: 100% "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: hsl(228, 12%, 48%);
   font-size: 0.875rem;
   font-weight: 500;
@@ -58,6 +42,7 @@ html {
 }
 
 .container {
+  display: grid;
   height: 100vh;
   place-content: center;
 }
@@ -71,6 +56,7 @@ html {
 }
 
 figure img {
+  display: block;
   width: 100%;
 }
 figure img.desktop-img {
@@ -86,11 +72,22 @@ figure img.desktop-img {
   flex-direction: row;
   align-items: center;
   padding-bottom: 1rem;
-  padding-right: 1rem;
 }
-
-.discounted-price {
+.product-price .price-current {
+  font-family: "Fraunces", sans-serif;
+  color: hsl(158, 36%, 37%);
+  font-weight: 700;
+  font-size: 2rem;
   padding-right: 1rem;
+  padding-bottom: 0;
+}
+.product-price .price-original {
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding-bottom: 0;
 }
 
 button {

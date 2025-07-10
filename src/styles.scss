@@ -4,10 +4,6 @@
 
 /* Variables */
 
-/* Fonts */
-$Montserrat: "Montserrat", sans-serif;
-$Fraunces: "Fraunces", sans-serif;
-
 /* Colour Palette*/
 $green-500: hsl(158, 36%, 37%);
 $green-700: hsl(158, 42%, 18%);
@@ -20,7 +16,7 @@ $white: hsl(0, 0%, 100%);
 $breakpoint-laptop: 1440px;
 
 h1 {
-  font: 100% $Montserrat;
+  font-family: "Montserrat", sans-serif;
   color: $grey;
   text-transform: uppercase;
   font-size: 0.75rem;
@@ -30,7 +26,7 @@ h1 {
 }
 
 h2 {
-  font: 100% $Fraunces;
+  font-family: "Fraunces", sans-serif;
   color: $black;
   font-size: 2rem;
   font-weight: 700;
@@ -38,23 +34,8 @@ h2 {
   padding-bottom: 1rem;
 }
 
-h3 {
-  font: 100% $Fraunces;
-  color: $green-500;
-  font-weight: 700;
-  font-size: 2rem;
-}
-
-h4 {
-  font: 100% $Montserrat;
-  color: $grey;
-  text-decoration: line-through;
-  font-size: 0.75rem;
-  font-weight: 500;
-}
-
 p {
-  font: 100% $Montserrat;
+  font-family: "Montserrat", sans-serif;
   color: $grey;
   font-size: 0.875rem;
   font-weight: 500;
@@ -72,6 +53,7 @@ html {
 }
 
 .container {
+  display: grid;
   height: 100vh;
   place-content: center;
 }
@@ -86,8 +68,8 @@ html {
 
 figure {
   img {
+    display: block;
     width: 100%;
-
     &.desktop-img {
       display: none;
     }
@@ -103,11 +85,24 @@ figure {
   flex-direction: row;
   align-items: center;
   padding-bottom: 1rem;
-  padding-right: 1rem;
-}
 
-.discounted-price {
-  padding-right: 1rem;
+  .price-current {
+    font-family: "Fraunces", sans-serif;
+    color: $green-500;
+    font-weight: 700;
+    font-size: 2rem;
+    padding-right: 1rem;
+    padding-bottom: 0; // Override generic p padding
+  }
+
+  .price-original {
+    font-family: "Montserrat", sans-serif;
+    color: $grey;
+    text-decoration: line-through;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding-bottom: 0; // Override generic p padding
+  }
 }
 
 button {
@@ -169,7 +164,6 @@ button {
       &.mobile-img {
         display: none;
       }
-
       &.desktop-img {
         display: block;
       }
